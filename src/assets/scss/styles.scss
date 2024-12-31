@@ -1,0 +1,351 @@
+// Custom variables
+@import "variables";
+@import "forms";
+@import "custom";
+@import "button";
+@import "select";
+@import "modal";
+@import "accordion";
+@import "datetimepicker";
+@import "tab";
+@import "checkbox";
+@import "pagination";
+@import "autoselect";
+
+@font-face {
+    font-family: "Averta";
+    font-style: normal;
+    font-weight: bold;
+    font-display: auto;
+    src: url("/assets/fonts/AVERTA-BOLD.ttf") format("truetype"), url("/assets/fonts/AVERTA-BOLD.woff") format("woff"), url("/assets/fonts/AVERTA-BOLD.OTF") format("opentype");
+}
+
+@font-face {
+    font-family: "Averta";
+    font-style: normal;
+    font-weight: normal;
+    font-display: auto;
+    src: url("/assets/fonts/AVERTA-REGULAR.ttf") format("truetype"), url("/assets/fonts/AVERTA-REGULAR.woff") format("woff"), url("/assets/fonts/AVERTA-REGULAR.OTF") format("opentype");
+}
+
+
+
+body {
+    color: $body-color;
+    background-color: #fff;
+    font-family: "Averta";
+    scrollbar-face-color: $gray-dark;
+    scrollbar-arrow-color: #fff;
+    scrollbar-shadow-color: #fff;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 16px;
+    font-weight: normal;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+::-webkit-scrollbar {
+    width: 12px;
+    -webkit-appearance: none;
+
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border: 1px solid #E9ECF2;
+    border-radius: 5px;
+    background-color: #F4F5F8;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #B7C3DC;
+    width: 6px !important;
+    border: 3px solid #F4F5F8;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
+.break-word {
+    word-break: break-word;
+}
+
+@keyframes bounce-alpha-up {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    25% {
+        opacity: 0;
+        transform: translateY(-10px) scale(.9);
+    }
+
+    26% {
+        opacity: 0;
+        transform: translateY(10px) scale(.9);
+    }
+
+    55% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.bounce-alpha-up {
+    animation-name: bounce-alpha-up;
+    animation-duration: 1.4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce-alpha-right {
+    0% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+
+    25% {
+        opacity: 0;
+        transform: translateX(10px) scale(.9);
+    }
+
+    26% {
+        opacity: 0;
+        transform: translateX(-10px) scale(.9);
+    }
+
+    55% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.bounce-alpha-right {
+    animation-name: bounce-alpha-right;
+    animation-duration: 1.4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce-alpha-circle {
+    from {
+        transform: rotate(0deg) translateX(2px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(2px) rotate(-360deg);
+    }
+}
+
+.bounce-alpha-circle {
+    animation-name: bounce-alpha-circle;
+    animation-duration: 1.4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.box-shadow-wrapper {
+    border: 1px solid $border-input;
+    background-color: #FFFFFF;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+
+
+.thread {
+    ul {
+        display: inline-flex;
+        align-items: center;
+
+        li {
+            display: inline-block;
+            padding-right: 5px;
+
+            a {
+                font-size: 17px;
+                color: $blue !important;
+                cursor: pointer;
+
+                &.not-link {
+                    color: $body-color !important;
+                    cursor: default;
+                }
+            }
+
+            img.thread-arrow-list {
+                margin-left: 8px;
+            }
+
+            &:last-child {
+                padding-right: 0;
+
+                a {
+                    color: $body-color !important;
+                    font-weight: bold;
+                }
+            }
+
+        }
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+div#root {
+    width: 100%;
+    height: 100%;
+
+    .wrapper-app {
+        width: 100%;
+        height: 100%;
+
+        .main-page {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .page-content {
+                overflow: auto;
+                flex: 1 1 100%;
+            }
+
+            header.header-app {
+                flex: 1 1 auto;
+            }
+
+            footer.footer-app {
+                flex: 1 1 auto;
+            }
+        }
+    }
+
+}
+
+.container-app {
+    width: 1320px;
+}
+@media only screen and (max-width: 1320px) {
+    .container-app {
+        width: 1250px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    div#root {
+        .wrapper-app {
+            .main-page {
+                .page-content {
+                    overflow-x: hidden;
+                }
+
+            }
+        }
+
+    }
+
+    .container-app {
+        max-width: 768px;
+        padding: 0 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
+
+.support-bar {
+    bottom: 90px;
+    right: 20px;
+    transition: all ease 0.25s;
+    z-index: 9;
+    position: fixed;
+}
+
+.support-bar a,
+.support-bar #totop {
+    position: relative;
+    transition: all ease 0.25s;
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+
+.support-bar a:hover,
+.support-bar #totop:hover {
+    transform: scale(1.2);
+}
+
+.support-bar a.phone-circle:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 2px #266bbe8a;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    -webkit-animation: ping 2s ease-in-out infinite;
+    animation: ping 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes ping {
+    0% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+
+    100% {
+        -webkit-transform: scale(1.7);
+        transform: scale(1.7);
+        opacity: 0;
+    }
+}
+
+@keyframes ping {
+    0% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+
+    100% {
+        -webkit-transform: scale(1.7);
+        transform: scale(1.7);
+        opacity: 0;
+    }
+}
+
+.page-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}

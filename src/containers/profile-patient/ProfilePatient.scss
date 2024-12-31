@@ -1,0 +1,311 @@
+@import '../../assets/scss/variables.scss';
+
+.wrapper-profile-patient-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: $margin-bottom-page;
+
+    h1.title {
+        text-align: center;
+        font-size: 30px;
+        color: #1C508A;
+        padding: 0;
+        margin: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+
+    .loading-space {
+        min-height: 400px;
+        width: 100%;
+        position: relative;
+    }
+
+    .top-title-page {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        .btn-delete-profile {
+            margin-right: 15px;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 0;
+            color: $blue-dark;
+        }
+    }
+
+    .list-profile {
+        .box-profile {
+            background-color: #fff;
+            padding: 20px;
+
+            .top-info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 10px;
+
+                .name {
+                    background: url('../../assets/images/user-blue.png') no-repeat left center;
+                    font-size: 18px;
+                    color: $blue-dark;
+                    font-weight: bold;
+                    padding-left: 40px;
+                    height: 30px;
+                    display: inline-flex;
+                    align-items: center;
+                }
+
+                .title {
+                    font-size: 18px;
+                    color: $blue-dark;
+                    font-weight: bold;
+                    height: 30px;
+                    display: inline-flex;
+                    align-items: center;
+                }
+
+                button.btn-view-detail {
+                    height: 30px;
+                    min-width: 120px;
+                }
+            }
+
+            .content-info {
+                .row-content-info {
+                    display: flex;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .col-content-info {
+                        height: 30px;
+                        display: inline-flex;
+                        align-items: center;
+                        flex: 1 1 100%;
+
+                        &:first-child {
+                            padding-left: 40px;
+                            flex: 1 1 auto;
+                            max-width: 220px;
+                            min-width: 220px;
+                            width: 220px;
+                        }
+
+                        &.birthday {
+                            background: url('../../assets/images/birthday-icon.png') no-repeat left center;
+                            background-size: 22px;
+
+                        }
+
+                        &.code {
+                            background: url('../../assets/images/code-icon.png') no-repeat left center;
+                            background-size: 24px;
+
+                        }
+
+                        &.phone {
+                            background: url('../../assets/images/phone-icon.png') no-repeat left center;
+                            background-size: 18px;
+                        }
+
+                        &.address {
+                            background: url('../../assets/images/address-icon.png') no-repeat left center;
+                            background-size: 18px;
+                        }
+                    }
+                }
+
+            }
+
+            .btn-booking {
+                .my-btn.btn-text-blue {
+                    span.MuiButton-label {
+                        color: $blue;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .default-toogle {
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+
+                .text {
+                    margin-right: 30px;
+                    padding-left: 10px;
+                    font-size: 18px;
+                }
+                .toogle-button {
+                    min-width: 100px;
+                }
+            }
+
+            .content-info-list-shedule-mobile {
+                display: none;
+            }
+
+            &.box-profile-schedule {
+                margin-top: 15px;
+
+                .row-schedule {
+                    display: flex;
+                    border-bottom: 1px solid $border-input;
+                    padding: 10px 0;
+                    align-items: center;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    button.my-btn {
+                        .MuiAvatar-root {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    .col-item {
+                        flex: 1 1 100%;
+                        padding: 0 5px;
+                        box-sizing: border-box;
+
+                        &:last-child {
+                            text-align: right;
+                        }
+
+                        &.col-status {
+                            color: $blue;
+                        }
+                    }
+
+                    &.row-schedule-header {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            &.box-profile-result {
+                min-height: 100%;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    &.search-profile-page {
+        .wrapper-result {
+            background-color: #fff;
+            padding: 20px 30px;
+
+            .content-wrapper {
+                display: flex;
+
+                .content-item {
+                    flex: 1 1 50%;
+                    min-width: 50%;
+                    max-width: 50%;
+                }
+            }
+
+            .title {
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 20px;
+                font-weight: bold;
+                color: $blue-dark;
+            }
+
+            .name {
+                background: url('../../assets/images/user-blue.png') no-repeat left center;
+                font-size: 18px;
+                color: $blue-dark;
+                font-weight: bold;
+                padding-left: 40px;
+                height: 30px;
+                display: inline-flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .row-result {
+                display: flex;
+                padding: 5px 0;
+
+                .col-item {
+                    flex: 1 1 100%;
+
+                    &:first-child {
+                        flex: 1 1 auto;
+                        padding-right: 60px;
+                        min-width: 120px;
+                    }
+                }
+            }
+
+            .btn-pre-book {
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+        }
+
+        h3.result-text {
+            font-size: 18px;
+            color: $blue-dark;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper-profile-patient-page {
+        margin-bottom: 40px;
+    }
+
+    .wrapper-profile-patient-page h1.title {
+        font-size: 26px;
+    }
+
+    .wrapper-profile-patient-page .top-title-page {
+        flex-direction: column;
+    }
+
+    .wrapper-profile-patient-page .top-title-page h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .wrapper-profile-patient-page .list-profile .box-profile .content-info .row-content-info {
+        flex-direction: column;
+    }
+
+    .wrapper-profile-patient-page .list-profile .box-profile .content-info .row-content-info .col-content-info {
+        &:last-child {
+            padding-left: 40px;
+            height: auto;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1250px) {
+    .content-info-list-shedule {
+        display: none;
+    }
+
+    .content-info-list-shedule-mobile {
+        display: block !important;
+    }
+
+}

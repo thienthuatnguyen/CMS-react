@@ -1,0 +1,73 @@
+//variables for color all app
+$red : #CB0704;
+
+$green: #66ab7d;
+$white: #ffffff;
+$blue: #1191d3;
+$blue-dark: #1C508A;
+$gray: #E9ECF2;
+$body-color: #212529;
+$bg-input: #F0F0F0;
+$border-input: #c8c8c8;
+$brown-flash: #1B4E89;
+$gray-dark: #D3D9E6; 
+$brown: #707EA4;
+$bg-gray: #f2f6f9;
+$text-blue: #1C508A;
+$placeholder: #cfcdcd;
+$yellow: #FFC000;
+$margin-bottom-page: 150px;
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+@mixin box-shadow($left, $top, $radius, $color) {
+	box-shadow: $left $top $radius $color;
+	-webkit-box-shadow: $left $top $radius $color;
+	-moz-box-shadow: $left $top $radius $color;
+}
+
+@mixin transition($property, $duration, $easing: linear) {
+	transition: $property $duration $easing;
+	-webkit-transition: $property $duration $easing;
+	-moz-transition: $property $duration $easing;
+}
+
+$padding-top-main-page: 20px;
+$padding-bottom-main-page: 15px;
+$width-left-content-scan-result-page: 260px;
+$width-right-content-scan-result-page:100%;
+$padding-right-content-scan-result-page:30px;
+
+$spacers: (
+	0: 0,
+	5: 5,
+	7: 7,
+	10: 10,
+	15: 15,
+	20: 20,
+	25: 25,
+	30: 30,
+	35: 35,
+	40: 40,
+	45: 45,
+	50: 50,
+	55: 55,
+	60: 60,
+	65: 65,
+	70: 70,
+	75: 75,
+	80: 80,
+) !default;
+$input-height: 36px;
+.flex-row {
+	display: flex;
+}
+.w-200 {
+	width: 200px;
+}
+.fw-500 {
+	font-weight: bold;
+}

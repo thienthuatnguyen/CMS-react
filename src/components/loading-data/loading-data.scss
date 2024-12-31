@@ -1,0 +1,18 @@
+@import '../../assets/scss/variables.scss';
+
+.loading-data {
+  background-color: #fff;
+  padding: 10px 0px;
+  width: 100%;
+  box-sizing: border-box;
+  &.single-loading {
+    margin-bottom: 0px;
+    padding: 0;
+    .MuiSkeleton-root {
+      margin-bottom: 0;
+    }
+  }
+  .MuiSkeleton-root {
+    margin-bottom: 10px;
+  }
+}

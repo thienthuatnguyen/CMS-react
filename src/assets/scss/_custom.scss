@@ -1,0 +1,297 @@
+button:focus {
+  outline: none;
+}
+
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none !important;
+
+  &:hover {
+    text-decoration: underline !important;
+
+  }
+}
+
+ul li {
+  list-style: none;
+  display: list-item;
+}
+
+button,
+input,
+textarea {
+  font-size: 16px !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background-color: transparent !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input.form-control,
+textarea.form-control {
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border: 1px solid $border-input !important;
+  background-color: transparent !important;
+  padding: 5px 10px !important;
+  line-height: 20px !important;
+}
+
+input.form-control,
+textarea.form-control {
+  &::-webkit-input-placeholder {
+    /* Edge */
+    color: $placeholder !important;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $placeholder !important;
+  }
+
+  &::placeholder {
+    color: $placeholder !important;
+  }
+}
+
+
+input.form-control:disabled,
+textarea.form-control:disabled {
+  border: 1px solid $border-input !important;
+  background-color: #F4F5F8 !important;
+  color: #707EA4 !important;
+  cursor: not-allowed;
+}
+
+.form-control.is-invalid {
+  background-image: none;
+  background-repeat: unset;
+  background-size: unset;
+  background-position: unset;
+  padding: .375rem .55rem;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+input:focus,
+input:active:focus,
+input.active:focus,
+input.focus,
+input:active.focus,
+input.active.focus,
+textarea:focus,
+textarea:active:focus,
+textarea.active:focus,
+textarea.focus,
+textarea:active.focus,
+textarea.active.focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 1px solid $brown !important;
+  color: $body-color !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// divider
+.divider {
+  text-align: center;
+}
+
+.divider:before,
+.divider:after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 40%;
+}
+
+.divider:before {
+  background: linear-gradient(to right, transparent, #818078);
+  right: .5em;
+  margin-left: -50%;
+}
+
+.divider:after {
+  background: linear-gradient(to right, #818078, transparent);
+  left: .5em;
+  margin-right: -50%;
+}
+
+.multiple-item-inline {
+  display: flex;
+
+  div {
+    flex: 1;
+  }
+}
+
+.add-link {
+  color: $blue;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.flex-1 {
+  flex: 1
+}
+
+.flex-2 {
+  flex: 2
+}
+
+.flex-4 {
+  flex: 4
+}
+
+button[disabled] {
+  cursor: not-allowed;
+}
+
+
+.form-group {
+  button.btn.dropdown-toggle:focus {
+    border: 1px solid $body-color !important;
+  }
+}
+
+
+
+button.btn[disabled] {
+  opacity: 1;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px !important;
+}
+
+.margin-bottom-15 {
+  margin-bottom: 15px !important;
+}
+
+.text-overflow-3-line span {
+  max-height: 100px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+.form-with-suffix {
+  position: relative;
+
+  input {
+    padding-right: 75px !important;
+  }
+
+  input~.form-suffix {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    border-left: 1px solid $border-input;
+    padding-left: 10px;
+  }
+
+  textarea~.form-suffix {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translateY(-100%);
+  }
+}
+
+input,
+textarea {
+  font-family: "Averta";
+  color: $body-color;
+
+}
+
+.MuiMenuItem-root {
+  font-size: 16px;
+  color: $body-color;
+  font-family: "Averta";
+}
+
+.my-breadcrumb {
+  li {
+    a {
+      font-weight: bold;
+      color: $blue-dark;
+      cursor: pointer;
+    }
+  }
+}
+
+.MuiDialog-container {
+  font-family: "Averta" !important;
+  .MuiTypography-h6 {
+    color: $body-color;
+    font-family: "Averta" !important;
+    font-weight: bold;
+  }
+  .MuiDialogContentText-root {
+    font-family: "Averta" !important;
+    color: $body-color;
+  }
+  .MuiDialogActions-root {
+    button.btn-reject {
+      text-transform: none;
+      color: $body-color;
+      font-weight: bold;
+    }
+    button.btn-accept {
+      text-transform: none;
+      color: $blue-dark;
+      font-weight: bold;
+    }
+  }
+}
+.MuiSnackbar-anchorOriginTopRight {
+  top: 18px !important;
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .my-breadcrumb {
+    margin-bottom: 30px !important;
+    li {
+      h2 {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+ 
+}
